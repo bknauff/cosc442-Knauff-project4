@@ -70,7 +70,7 @@ public class RecipeTest {
 
 	@Test
 	public void testSetNegativePrice() {
-		r.setPrice(-10);
+		r.setPrice(-50);
 		assertEquals(0,r.getPrice());
 	}
 
