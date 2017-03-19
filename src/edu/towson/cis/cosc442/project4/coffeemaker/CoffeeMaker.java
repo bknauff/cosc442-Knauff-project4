@@ -37,7 +37,7 @@ public class CoffeeMaker {
         boolean canAddRecipe = true;
             
         //Check if the recipe already exists
-        canAddRecipe = !recipeExists(r);
+        canAddRecipe = recipeExists(r);
         
         //Check for an empty recipe, add recipe to first empty spot
         if(canAddRecipe) {
@@ -160,7 +160,7 @@ public class CoffeeMaker {
             canMakeCoffee = false;
         }
         if(canMakeCoffee) {
-	        inventory.setCoffee(inventory.getCoffee() + r.getAmtCoffee()); 
+	        inventory.setCoffee(inventory.getCoffee() - r.getAmtCoffee()); 
 	        inventory.setMilk(inventory.getMilk() - r.getAmtMilk());
 	        inventory.setSugar(inventory.getSugar() - r.getAmtSugar());
 	        inventory.setChocolate(inventory.getChocolate() - r.getAmtChocolate());
